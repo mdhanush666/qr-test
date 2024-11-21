@@ -29,13 +29,13 @@ const qrCounter = mongoose.model('User', qrcodeSchema);
 
 app.post('/scan-qr', async (req, res) => {
     try {
-      const { qr_id, membership_id, qr_count } = req.body;
+      const { qr_data, membership_id, qr_count } = req.body;
 
       console.log(req.body);
     
   
       const count = new qrCounter({ 
-        qr_id: qr_id,
+        qr_data: qr_data,
           membership_id: membership_id,
           qr_count: qr_count });
 
