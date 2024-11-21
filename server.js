@@ -19,7 +19,7 @@ mongoose.connect(process.env.DB)
 })
 
 const qrcodeSchema = new mongoose.Schema({
-    qr_id: { type: String },
+    qr_data: { type: String },
     membership_id: { type: String},
     qr_count: { type: Number },
   });
